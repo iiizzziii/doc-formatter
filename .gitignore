@@ -1,0 +1,11 @@
+bin/
+obj/
+/packages/
+riderModule.iml
+/_ReSharper.Caches/
+coderama.api/Migrations
+coderama.api/*.db
+coderama.api/*.db*
+.idea/*
+coderama.sln.DotSettings
+coderama.sln.DotSettings.user

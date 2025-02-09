@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "coderama.api", "coderama.api\coderama.api.csproj", "{3EBE646A-F5F8-400D-BC9B-098BBFF9EA5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "coderama.test", "coderama.test\coderama.test.csproj", "{83E0F098-94A9-4033-8C82-3C19AAA9437A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3EBE646A-F5F8-400D-BC9B-098BBFF9EA5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EBE646A-F5F8-400D-BC9B-098BBFF9EA5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EBE646A-F5F8-400D-BC9B-098BBFF9EA5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EBE646A-F5F8-400D-BC9B-098BBFF9EA5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83E0F098-94A9-4033-8C82-3C19AAA9437A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83E0F098-94A9-4033-8C82-3C19AAA9437A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83E0F098-94A9-4033-8C82-3C19AAA9437A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83E0F098-94A9-4033-8C82-3C19AAA9437A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
