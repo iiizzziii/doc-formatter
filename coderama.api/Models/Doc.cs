@@ -6,7 +6,7 @@ namespace coderama.api.Models;
 public class Doc
 {
     [DataMember]
-    public int Id { get; init; }
+    public int Id { get; set; }
     
     [DataMember]
     public List<string> Tags { get; set; } = [];

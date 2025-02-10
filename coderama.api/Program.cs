@@ -1,4 +1,5 @@
 using coderama.api.Data;
+using coderama.api.Models;
 using coderama.api.Services;
 using coderama.api.Services.Format;
 using coderama.api.Services.Storage;
@@ -9,10 +10,16 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddScoped<IDocumentService, DocumentService>();
-builder.Services.AddScoped<IDocumentStorage, SqliteDocumentStorage>();
 builder.Services.AddScoped<ISerializationProvider, JsonProvider>();
 builder.Services.AddScoped<ISerializationProvider, XmlProvider>();
 builder.Services.AddScoped<SerializationProviderFactory>();
+
+//in memory
+// builder.Services.AddSingleton(new Dictionary<int, Doc>());
+// builder.Services.AddScoped<IDocumentStorage, MemoryDocumentStorage>();
+
+//sqlite
+builder.Services.AddScoped<IDocumentStorage, SqliteDocumentStorage>();
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 

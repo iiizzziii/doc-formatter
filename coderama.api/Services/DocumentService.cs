@@ -1,3 +1,4 @@
+using coderama.api.Models;
 using coderama.api.Services.Format;
 using coderama.api.Services.Storage;
 
@@ -13,6 +14,17 @@ public class DocumentService(
         if (doc == null) throw new KeyNotFoundException($"{id} not found");
         
         var serializationProvider = serializationProviderFactory.GetProvider(contentType);
+        
         return serializationProvider.Serialize(doc);
+    }
+
+    public async Task AddDocAsync(Doc document)
+    {
+        _ = await storage.AddAsync(document);
+    }
+
+    public async Task UpdateDocAsync(Doc document)
+    {
+        _ = await storage.UpdateAsync(document);
     }
 }
