@@ -1,5 +1,4 @@
 using coderama.api.Data;
-using coderama.api.Models;
 using coderama.api.Services;
 using coderama.api.Services.Format;
 using coderama.api.Services.Storage;
@@ -12,6 +11,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddScoped<IDocumentService, DocumentService>();
 builder.Services.AddScoped<ISerializationProvider, JsonProvider>();
 builder.Services.AddScoped<ISerializationProvider, XmlProvider>();
+builder.Services.AddScoped<ISerializationProvider, MessagePackProvider>();
+builder.Services.AddScoped<ISerializationProvider, ProtoProvider>();
 builder.Services.AddScoped<SerializationProviderFactory>();
 
 //in memory
