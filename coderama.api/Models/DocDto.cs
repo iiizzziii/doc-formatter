@@ -1,7 +1,12 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace coderama.api.Models;
 
 public record DocDto
 {
+    [Required]
     public List<string> Tags { get; init; } = [];
-    public Dictionary<string, string> Data { get; set; } = [];                           
+    
+    [Required]
+    public Dictionary<string, string> Data { get; init; } = [];                           
 }
